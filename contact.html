@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital San Itario - Equipo médico</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>  
+        <a href="index.html"><img id="logo" src="images/hospital_logo.png" alt="Hospital San Itario" title="Hospital San Itario"></a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="staff.html">Equipo médico</a>
+            <a href="contact.html">Contacto</a>
+            <button>Reservar cita</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="contact">
+            <h2>Formulario de contacto</h2>
+            <div class="contact-form">
+                <form>
+                    <table>
+                        <tr>
+                            <td class="form-label"><label for="name">Nombre</label></td>
+                            <td><input type="text" id="name" placeholder="Nombre"></td>
+                        </tr>
+                        <tr>
+                            <td class="form-label"><label for="email">Email</label></td>
+                            <td><input type="email" id="email" placeholder="nombre@mail.com"></td>
+                        </tr>
+                        <tr>
+                            <td class="form-label"><label for="subject">Asunto</label></td>
+                            <td><input type="text" id="subject" placeholder="Asunto"></td>
+                        </tr>
+                        <tr>
+                            <td class="form-label"><label for="body">Mensaje</label></td>
+                            <td><textarea id="body" placeholder="Mensaje"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Enviar</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>
+        <section id="location">
+            <h2>Ubicación</h2>
+            <p>Av. Doctor Dencil 1869</p>
+            <div class="location-map">
+                <img src="images/location.png" alt="Ubicación" title="Ubicación">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="links">
+            <ul class="quick-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="staff.html">Equipo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="https://www.facebook.com/hospital">Facebook</a></li>
+                <li><a href="https://www.twitter.com/hospital">Twitter</a></li>
+                <li><a href="https://api.whatsapp.com/56912345678">WhatsApp</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <p>Av. Doctor Dencil 1869</p>
+            <p>Mesa Central:  +569 1234 5678</p>
+        </div>
+        <p>© 2024 Hospital San Itario. Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

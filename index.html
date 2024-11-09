@@ -3,33 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No vuelvas nunca más al hospital</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hospital San Itario</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>  
-        <img id="logo" src="hospital_logo.png">
+        <a href="index.html"><img id="logo" src="images/hospital_logo.png" alt="Hospital San Itario" title="Hospital San Itario"></a>
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="equipo.html">Equipo médico</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="staff.html">Equipo médico</a>
+            <a href="contact.html">Contacto</a>
             <button>Reservar cita</button>
         </nav>
     </header>
     
     <main>
         <section id="welcome">
-            <h1>Bienvenido al Hospital Pettinelli</h1>
-            <p>En este centro asistencial usted puede atenderse las 24 horas del día.</p>
-            <p>Le pido a ella que no piense en mí.</p>
+            <h1>Bienvenido al Hospital San Itario</h1>
+            <p class="twenty-four-seven">En este centro asistencial usted puede atenderse las 24 horas del día, los 365 días del año, los 7 días de la semana.</p>
+            <div class="values">
+                <div class="mission">
+                    <h3>Misión</h3>
+                    <p>Nuestra misión es proporcionar a los pacientes una atención rápida y eficiente, poniendo su salud y su bienestar como máxima prioridad.</p>
+                </div>
+                <div class="vision">
+                    <h3>Visión</h3>
+                    <p>Nuestra visión es ser reconocido como uno de los centros médicos de mayor prestigio de la ciudad y del país.</p>
+                </div>
+            </div>
         </section>
         <section id="services">
             <h2>Servicios</h2>
             <div class="services-list">
-                <div class="service-item urgency"><span>Urgencias</span></div>
-                <div class="service-item laboratory"><span>Laboratorio</span></div>
-                <div class="service-item maternity"><span>Maternidad</span></div>
-                <div class="service-item radiology"><span>Radiología</span></div>
+                <div class="service-item">
+                    <img src="images/urgency.webp" alt="Urgencias" title="Urgencias">
+                    <span>Urgencias</span>
+                    <p>Atención rápida, inmediata y eficiente según las necesidades del paciente</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/laboratory.webp" alt="Laboratorio Clínico" title="Laboratorio Clínico">
+                    <span>Laboratorio Clínico</span>
+                    <p>Realizamos más de 50 tipos de exámenes médicos, usando tecnología de última generación</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/maternity.jpg" alt="Maternidad" title="Maternidad">
+                    <span>Maternidad</span>
+                    <p>Contamos con la más moderna infraestructura para recibir al nuevo miembro de su familia.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/radiology.jpg" alt="Imagenología" title="Imagenología">
+                    <span>Imagenología</span>
+                    <p>Exámenes de radiología, ecografía, resonancia magnética y otros</p>
+                </div>
             </div>
         </section>
         <section id="testimonials">
@@ -40,9 +65,21 @@
     </main>
 
     <footer>
-        <div id="links"></div>
-        <div id="contact"></div>
-        <p>(c) 2024 Hospital. Todos los derechos reservados</p>
+        <div class="links">
+            <ul class="quick-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="staff.html">Equipo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="https://www.facebook.com/hospital">Facebook</a></li>
+                <li><a href="https://www.twitter.com/hospital">Twitter</a></li>
+                <li><a href="https://api.whatsapp.com/56912345678">WhatsApp</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <p>Av. Doctor Dencil 1869</p>
+            <p>Mesa Central:  +569 1234 5678</p>
+        </div>
+        <p>© 2024 Hospital San Itario. Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
