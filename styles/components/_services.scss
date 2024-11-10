@@ -1,0 +1,43 @@
+.services__list,
+.staff-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__item,
+.staff-item {
+    width: 16rem;
+    height: 21rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.item__department {
+    font-weight: bold;
+}
+
+.doctor-name {
+   font-weight: bold;
+}
+
+.item__img,
+.staff-item img {
+    width: 12rem;
+    height: 12rem;
+}
+
+.specialty {
+    font-size: 0.75rem;
+    font-style: italic;
+    background-color: dodgerblue;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.experience {
+    font-size: 0.75rem;
+}

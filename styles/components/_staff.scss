@@ -1,0 +1,38 @@
+.staff__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__doctor {
+    width: 16rem;
+    height: 21rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    border: 1px solid black;
+
+    
+}
+
+.doctor__photo {
+    width: 12rem;
+    height: 12rem;
+}
+
+.doctor__name {
+   font-weight: bold;
+}
+
+.doctor__specialty {
+    font-size: 0.75rem;
+    font-style: italic;
+    background-color: dodgerblue;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.doctor__experience {
+    font-size: 0.75rem;
+}

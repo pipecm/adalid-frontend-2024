@@ -1,0 +1,29 @@
+footer {
+    color: white;
+    padding: 1rem 0rem;
+    font-size: 0.8rem;
+    background-color: #999;
+    text-align: center;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-left: 0px;
+
+    li a {
+        margin: 0rem 2rem;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        color: white;
+    }
+}
+
+.footer__contact {
+    text-align: center;
+}
