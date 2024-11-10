@@ -75,13 +75,17 @@ nav button {
 .service-item,
 .staff-item {
     width: 16rem;
-    height: 20rem;
+    height: 21rem;
     padding: 1rem;
     margin: 1rem;
     border-radius: 10px;
     color: black;
     text-align: center;
     border: 1px solid black;
+}
+
+.department {
+    font-weight: bold;
 }
 
 .doctor-name {
