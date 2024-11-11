@@ -7,21 +7,54 @@
     text-align: center;
 }
 
-.welcome__values {
+.values {
     justify-content: space-between;
     align-items: center;
     display: flex;
     align-content: stretch;
+    flex-wrap: wrap;
+
+    &__card {
+        padding: 1rem;
+        margin: 1rem;
+        width: 30rem;
+        height: 8rem;
+        border: none;
+        border-radius: 1rem;
+        flex: 1 1 auto;
+        background-color: dodgerblue;
+        color: white;
+    }
 }
 
-.values__card {
-    padding: 1rem;
-    margin: 1rem;
-    width: 35rem;
-    height: 8rem;
-    border: none;
-    border-radius: 1rem;
-    flex: 1 1 auto;
-    background-color: dodgerblue;
-    color: white;
+@media (max-width: 768px) {
+    .welcome__title {
+        font-size: 2.0rem;
+    }
+
+    .values {
+        width: 768px;
+        flex-direction: column;
+
+        &__card {
+            width: 20rem;
+            height: 12rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome__title {
+        font-size: 1.5rem;
+    } 
+
+    .values {
+        width: 480px;
+        flex-direction: column;
+
+        &__card {
+            width: 10rem;
+            height: 12rem;
+        }
+    }
 }

@@ -68,7 +68,25 @@ Si todo lo anterior se realizó correctamente, se debería visualizar el sitio w
 |[staff.html](staff.html)       |Equipo médico del hospital, especialidades y experiencia relevante.                                 |  
 |[contact.html](contact.html)   |Formulario de contacto                 |
 
+## Aplicación de SASS y BEM
+Con el fin de presentar de forma más ordenada los estilos de los diversos elementos del sitio web, se renombraron varios de los estilos usando la convención BEM (Bloque-Elemento-Modificador). Asimismo, se generó el CSS por medio del preprocesador SASS, usando lenguaje SCSS en cada componente.
+
+## Estructura SASS
+|Componente     |Descripción                                 |
+|---------------|--------------------------------------------|
+|[base](styles/components/_base.scss)|Contiene los estilos base del sitio completo|
+|[contact](styles/components/_contact.scss)|Contiene los estilos para el formulario de contacto y mapa de ubicación|
+|[footer](styles/components/_footer.scss)|Contiene los estilos para el footer (links rápidos, info de contacto y copyright)|
+|[header](styles/components/_header.scss)|Contiene los estilos de la barra superior, logo y links|
+|[services](styles/components/_services.scss)|Contiene los estilos aplicados a la grilla de servicios del hospital|
+|[staff](styles/components/_staff.scss)|Contiene los estilos aplicados a la grilla de médicos del hospital|
+|[testimonials](styles/components/_testimonials.scss)|Contiene los estilos de los testimonios de los pacientes|
+|[welcome](styles/components/_welcome.scss)|Contiene los estilos de la sección de bienvenida, misión y visión|
+
 ## Changelog
 2024-11-09  Entrega ejercicio práctico Nº 1
+
+2024-11-10  Entrega ejercicio práctico Nº 2
+
 
 © 2024 Hospital San Itario. Todos los derechos reservados

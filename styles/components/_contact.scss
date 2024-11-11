@@ -30,3 +30,21 @@
 .form__label {
     width: 10rem;
 }
+
+@media (max-width: 1080px) {
+    .contact__block img {
+        width: 50rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__block img {
+        width: 40rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact__block img {
+        width: 20rem;
+    }
+}

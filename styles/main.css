@@ -37,6 +37,15 @@ header {
   font-size: 1rem;
 }
 
+.nav__button:hover {
+  background-color: blue;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+}
 .welcome__title {
   font-size: 2.5rem;
   text-align: center;
@@ -46,17 +55,17 @@ header {
   text-align: center;
 }
 
-.welcome__values {
+.values {
   justify-content: space-between;
   align-items: center;
   display: flex;
   align-content: stretch;
+  flex-wrap: wrap;
 }
-
 .values__card {
   padding: 1rem;
   margin: 1rem;
-  width: 35rem;
+  width: 30rem;
   height: 8rem;
   border: none;
   border-radius: 1rem;
@@ -65,50 +74,68 @@ header {
   color: white;
 }
 
-.services__list,
-.staff-list {
+@media (max-width: 768px) {
+  .welcome__title {
+    font-size: 2rem;
+  }
+  .values {
+    width: 768px;
+    flex-direction: column;
+  }
+  .values__card {
+    width: 20rem;
+    height: 12rem;
+  }
+}
+@media (max-width: 480px) {
+  .welcome__title {
+    font-size: 1.5rem;
+  }
+  .values {
+    width: 480px;
+    flex-direction: column;
+  }
+  .values__card {
+    width: 10rem;
+    height: 12rem;
+  }
+}
+.services-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.list__item,
-.staff-item {
-  width: 16rem;
+.service {
+  width: 12rem;
   height: 21rem;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 10px;
   color: black;
   text-align: center;
   border: 1px solid black;
 }
-
-.item__department {
-  font-weight: bold;
-}
-
-.doctor-name {
-  font-weight: bold;
-}
-
-.item__img,
-.staff-item img {
+.service__img {
   width: 12rem;
   height: 12rem;
 }
-
-.specialty {
-  font-size: 0.75rem;
-  font-style: italic;
-  background-color: dodgerblue;
-  border-radius: 0.5rem;
-  color: white;
+.service__department {
+  font-weight: bold;
 }
 
-.experience {
-  font-size: 0.75rem;
+@media (max-width: 768px) {
+  .services__list {
+    width: 768px;
+    flex-direction: column;
+  }
 }
-
+@media (max-width: 480px) {
+  .services__list {
+    width: 480px;
+    flex-direction: column;
+  }
+}
 .testimonials__quote {
   font-size: 1.25rem;
   font-weight: lighter;
@@ -121,13 +148,14 @@ header {
   font-weight: bolder;
 }
 
-.staff__list {
+.staff-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.list__doctor {
-  width: 16rem;
+.doctor {
+  width: 12rem;
   height: 21rem;
   padding: 1rem;
   margin: 1rem;
@@ -136,16 +164,13 @@ header {
   text-align: center;
   border: 1px solid black;
 }
-
 .doctor__photo {
   width: 12rem;
   height: 12rem;
 }
-
 .doctor__name {
   font-weight: bold;
 }
-
 .doctor__specialty {
   font-size: 0.75rem;
   font-style: italic;
@@ -153,11 +178,22 @@ header {
   border-radius: 0.5rem;
   color: white;
 }
-
 .doctor__experience {
   font-size: 0.75rem;
 }
 
+@media (max-width: 768px) {
+  .staff-list {
+    width: 768px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .staff-list {
+    width: 480px;
+    flex-direction: column;
+  }
+}
 .contact__block {
   border: 1px solid black;
   border-radius: 1rem;
@@ -186,6 +222,21 @@ header {
   width: 10rem;
 }
 
+@media (max-width: 1080px) {
+  .contact__block img {
+    width: 50rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact__block img {
+    width: 40rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact__block img {
+    width: 20rem;
+  }
+}
 footer {
   color: white;
   padding: 1rem 0rem;
