@@ -46,12 +46,17 @@ git clone git@github.com:pipecm/adalid-frontend-2024.git
 cd adalid-frontend-2024
 ```
 
-3. Ejecutar el comando que imprime el directorio actual:
+3. Ejecutar el comando para instalar las dependencias de Bootstrap:
+```
+npm install
+```
+
+4. Ejecutar el comando que imprime el directorio actual:
 ```
 pwd
 ```
 
-4. Copiar el resultado obtenido, abrir un browser y pegar la ruta obtenida, seguido de `/index.html`, por ejemplo:
+5. Copiar el resultado obtenido, abrir un browser y pegar la ruta obtenida, seguido de `/index.html`, por ejemplo:
 
 ```
 /home/myself/development/adalid-frontend-2024/index.html
