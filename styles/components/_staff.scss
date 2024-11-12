@@ -1,3 +1,5 @@
+@use "mixins";
+
 .staff-list {
     display: flex;
     justify-content: space-between;
@@ -5,14 +7,7 @@
 }
 
 .doctor {
-    width: 12rem;
-    height: 21rem;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 10px;
-    color: black;
-    text-align: center;
-    border: 1px solid black;
+    @include mixins.grid-item(21rem, 12rem);
 
     &__photo {
         width: 12rem;

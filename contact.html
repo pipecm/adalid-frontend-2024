@@ -15,7 +15,7 @@
             <a class="nav__link" href="index.html">Inicio</a>
             <a class="nav__link" href="staff.html">Equipo médico</a>
             <a class="nav__link" href="contact.html">Contacto</a>
-            <button class="nav__button">Reservar cita</button>
+            <button class="btn btn-primary nav__button">Reservar cita</button>
         </nav>
     </header>
     
@@ -24,27 +24,23 @@
             <h2>Formulario de contacto</h2>
             <div class="contact__block">
                 <form>
-                    <table>
-                        <tr>
-                            <td class="form__label"><label for="name">Nombre</label></td>
-                            <td><input type="text" id="name" placeholder="Nombre"></td>
-                        </tr>
-                        <tr>
-                            <td class="form__label"><label for="email">Email</label></td>
-                            <td><input type="email" id="email" placeholder="nombre@mail.com"></td>
-                        </tr>
-                        <tr>
-                            <td class="form__label"><label for="subject">Asunto</label></td>
-                            <td><input type="text" id="subject" placeholder="Asunto"></td>
-                        </tr>
-                        <tr>
-                            <td class="form__label"><label for="body">Mensaje</label></td>
-                            <td><textarea id="body" placeholder="Mensaje"></textarea></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><button type="submit">Enviar</button></td>
-                        </tr>
-                    </table>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="email" class="form-control" id="name" placeholder="Juanito">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="juanito@email.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Asunto</label>
+                        <input type="email" class="form-control" id="subject" placeholder="Asunto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="8"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
         </section>

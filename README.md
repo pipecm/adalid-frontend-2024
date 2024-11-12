@@ -82,11 +82,24 @@ Con el fin de presentar de forma más ordenada los estilos de los diversos eleme
 |[staff](styles/components/_staff.scss)|Contiene los estilos aplicados a la grilla de médicos del hospital|
 |[testimonials](styles/components/_testimonials.scss)|Contiene los estilos de los testimonios de los pacientes|
 |[welcome](styles/components/_welcome.scss)|Contiene los estilos de la sección de bienvenida, misión y visión|
+|[mixins](styles/components/_mixins.scss)|Contiene los mixins aplicados en el sitio|
+
+## Mixins
+Se creó un mixin que setea el tamaño y layout de los elementos de las grillas de servicios del hospital y del equipo médico, usando como parámetros su altura y ancho.
+
+## Integración de Bootstrap
+Con el fin de darle una apariencia más profesional al sitio y para efectos de aprendizaje de la herramienta, se aplicó Bootstrap en los siguientes componentes:
+- Botones de reserva de cita y envío de formulario
+- Tarjetas "Misión" y "Visión"
+- Formulario de contacto
+
 
 ## Changelog
 2024-11-09  Entrega ejercicio práctico Nº 1
 
 2024-11-10  Entrega ejercicio práctico Nº 2
+
+2024-11-11  Entrega ejercicio práctico Nº 3
 
 
 © 2024 Hospital San Itario. Todos los derechos reservados

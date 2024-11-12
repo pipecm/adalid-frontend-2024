@@ -1,3 +1,5 @@
+@use "mixins";
+
 .services-list {
     display: flex;
     justify-content: space-between;
@@ -5,14 +7,7 @@
 }
 
 .service {
-    width: 12rem;
-    height: 21rem;
-    padding: 1rem;
-    margin: 0.5rem;
-    border-radius: 10px;
-    color: black;
-    text-align: center;
-    border: 1px solid black;
+    @include mixins.grid-item(24rem, 16rem);
 
     &__img {
         width: 12rem;

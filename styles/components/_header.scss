@@ -1,3 +1,7 @@
+@use "sass:color";
+
+$header-blue: #3882f6;
+
 header {
     display: flex;
     justify-content: space-between;
@@ -13,14 +17,14 @@ header {
     font-weight: bold;
     text-decoration: none;
     padding: 1rem;
-    color: #3882f6;
+    color: $header_blue;
 }
 
 .nav__button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 1rem;
     border: 1px solid;
-    background-color: #3882f6;
+    background-color: $header_blue;
     color: #f9faf8;
     border-radius: 10px;
     font-weight: bold;
@@ -28,7 +32,7 @@ header {
 }
 
 .nav__button:hover {
-    background-color: blue;
+    background-color: color.adjust($header-blue, $lightness: 10%);
 }
 
 @media (max-width: 768px) {
