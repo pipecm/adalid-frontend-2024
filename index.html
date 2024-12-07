@@ -16,6 +16,7 @@
             <a class="nav__link" href="staff.html">Equipo médico</a>
             <a class="nav__link" href="contact.html">Contacto</a>
             <button class="btn btn-primary nav__button">Reservar cita</button>
+            <button class="btn btn-primary nav__button" onclick="register()">Registro</button>
         </nav>
     </header>
     
@@ -40,28 +41,7 @@
         </section>
         <section id="services">
             <h2>Servicios</h2>
-            <div class="services-list">
-                <div class="service">
-                    <img class="service__img" src="images/urgency.webp" alt="Urgencias" title="Urgencias">
-                    <p class="service__department">Urgencias</p>
-                    <p>Atención rápida, inmediata y eficiente según las necesidades del paciente</p>
-                </div>
-                <div class="service">
-                    <img class="service__img" src="images/laboratory.webp" alt="Laboratorio Clínico" title="Laboratorio Clínico">
-                    <p class="service__department">Laboratorio Clínico</p>
-                    <p>Realizamos más de 50 tipos de exámenes médicos, usando tecnología de última generación</p>
-                </div>
-                <div class="service">
-                    <img class="service__img" src="images/maternity.jpg" alt="Maternidad" title="Maternidad">
-                    <p class="service__department">Maternidad</p>
-                    <p>Contamos con la más moderna infraestructura para recibir al nuevo miembro de su familia.</p>
-                </div>
-                <div class="service">
-                    <img class="service__img" src="images/radiology.jpg" alt="Imagenología" title="Imagenología">
-                    <p class="service__department">Imagenología</p>
-                    <p>Exámenes de radiología, ecografía, resonancia magnética y otros</p>
-                </div>
-            </div>
+            <div id="services-grid" class="services-list"></div>
         </section>
         <section id="testimonials">
             <h2>Testimonios</h2>
@@ -85,5 +65,6 @@
         </div>
         <p>© 2024 Hospital San Itario. Todos los derechos reservados</p>
     </footer>
+    <script type="module" src="scripts/app.js"></script>
 </body>
 </html>
