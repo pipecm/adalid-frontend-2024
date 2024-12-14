@@ -153,14 +153,17 @@ if (htmlName == 'staff.html') {
     hospitalDoctors.forEach(doctorItem => doctors.appendChild(getDoctorItem(doctorItem)));
 }
 
-/* Recorrido y stringify */
+/* Stringify */
+
 console.log(JSON.stringify(hospitalDoctors));
 
-/* Uso de estructuras de datos */
+/* Agregar doctor a la lista */
 
 const addDoctorName = (doctorNames, newDoctorName) => {
     doctorNames.push(newDoctorName);
 };
+
+/* Quitar doctor de la lista */
 
 const removeDoctorName = (doctorNames, removedDoctorName) => {
     let indexToRemove = doctorNames.indexOf(removedDoctorName);
@@ -204,6 +207,8 @@ const sortDoctorsByYearsOfExperience = (doctors) => {
 
     return [...sortDoctorsByYearsOfExperience(leftHalf), pivot, ...sortDoctorsByYearsOfExperience(rightHalf)];
 };
+
+/* Uso de estructuras de datos */
 
 /* Lista inicial de doctores */
 let doctorNames = hospitalDoctors.map(doctor => doctor.name);

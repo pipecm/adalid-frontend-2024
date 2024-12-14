@@ -127,14 +127,31 @@ Para usar el debugger, se debe colocar la palabra reservada `debugger` en cada p
 
 En `app.js` se lanzan errores cada vez que se ingresen datos incorrectos en los prompts, de manera que en la sección principal del código tales errores sean capturados para lanzar los mensajes de error respectivos con `alert()`.
 
+## Implementación de objetos JSON
+Los objetos JSON de datos se implementaron codificados en duro en el fichero `data.js`. 
+
+### Operaciones
+* __Clonación:__ Para clonar objetos JSON se utilizaron en conjunto los métodos `JSON.stringify()` y `JSON.parse()`, de manera que al hacer cambios en el objeto clonado no se reflejen en el objeto original, sino que sólo en el nuevo.
+* __Merge:__ Se utilizó el operador de deconstrucción (`...`) en la implementación del algoritmo de ordenamiento.
+* __Recorrido:__ Para recorrer los JSON se usaron principalmente operaciones _lambda_ como `forEach()`o `map()` en lugar de recorrerlos usando ciclos `for` o `(do) while`.
+
+## Estructuras de datos implementadas en el proyecto
+Las estructuras de datos fueron implementadas en el archivo `structures.js`. Estas son:
+
+* __Pila:__ Por medio de la clase `Stack` y usando un array como base, se implementaron sus operaciones típicas (`push()`, `pop()`) además de un método para consultar su contenido en el tope sin removerlo (`getLastItem()`).
+* __Cola:__ A través de la clase `Queue`, se realizó su implementación de forma análoga a como se hizo con la cola, esto es, usando un array como base y sus operaciones correspondientes como `enqueue()` y `dequeue()`.
+
+## Algoritmos y complejidad
+* __Búsqueda:__ El algoritmo de búsqueda implementado en la función `searchDoctorName()` usa la operación `filter()` para filtrar por el nombre del médico en el arreglo de doctores, y se retorna el índice que ocupa en el arreglo, o bien `undefined` si no se encuentra. Al estar basado en `filter()`, este algoritmo tiene complejidad `O(n)`.
+* __Ordenamiento:__ El algoritmo para ordenar los doctores ascendentemente según su edad se implementó en la función `sortDoctorsByYearsOfExperience()`. Dado que se basa en el algoritmo de ordenamiento QuickSort, éste presenta una complejidad de `O(n log n)`.
+
 ## Changelog
-2024-11-09  Entrega ejercicio práctico Nº 1
-
-2024-11-10  Entrega ejercicio práctico Nº 2
-
-2024-11-11  Entrega ejercicio práctico Nº 3
-
-2024-12-07  Entrega taller 2 del módulo 3
-
-
+|Fecha      |Cambios introducidos                       |
+|-----------|-------------------------------------------|
+|2024-11-09 | Entrega ejercicio práctico Nº 1           |
+|2024-11-10 | Entrega ejercicio práctico Nº 2           |
+|2024-11-11 | Entrega ejercicio práctico Nº 3           |
+|2024-12-07 | Entrega taller 2 del módulo 3             |
+|2024-12-14 | Entrega Laboratorio Virtual 1 Módulo 3    |
+  
 © 2024 Hospital San Itario. Todos los derechos reservados
