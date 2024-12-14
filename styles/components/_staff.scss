@@ -7,7 +7,7 @@
 }
 
 .doctor {
-    @include mixins.grid-item(21rem, 12rem);
+    @include mixins.grid-item(23rem, 14rem);
 
     &__photo {
         width: 12rem;
