@@ -145,6 +145,17 @@ Las estructuras de datos fueron implementadas en el archivo `structures.js`. Est
 * __Búsqueda:__ El algoritmo de búsqueda implementado en la función `searchDoctorName()` usa la operación `filter()` para filtrar por el nombre del médico en el arreglo de doctores, y se retorna el índice que ocupa en el arreglo, o bien `undefined` si no se encuentra. Al estar basado en `filter()`, este algoritmo tiene complejidad `O(n)`.
 * __Ordenamiento:__ El algoritmo para ordenar los doctores ascendentemente según su edad se implementó en la función `sortDoctorsByYearsOfExperience()`. Dado que se basa en el algoritmo de ordenamiento QuickSort, éste presenta una complejidad de `O(n log n)`.
 
+## Uso de programación funcional
+En `functions.js` se realizaron las implementaciones de las diversas funciones requeridas. En ellas se usaron las diversas técnicas estudiadas en el curso, tales como currying, composición, recursión, try/catch y `Promise`.
+
+## Eventos y asincronía
+* En el formulario de contacto del hospital se añadió un listener que captura la información de dicho formulario, y luego se muestra un mensaje en pantalla alertando del "envío exitoso del mensaje". 
+* Asimismo, luego de 10 segundos en la página del formulario de contacto, se muestra un `alert()` simulando la llegada de un paciente al hospital.
+* Se creó la función `hospitalDoctorsAsJson()` en `data.js` que retorna un string JSON con la información de los doctores, con el propósito de simular la llamada a una API REST, la cual es tratada en las funciones `processAsyncData()` y `getAsyncData()`mediante `Promise` y `async/await` respectivamente. 
+
+## Orientación a objetos
+En `entities.js` se implementaron las clases `Doctor` y `Cirujano`, en donde la segunda hereda de la primera. `Doctor` encapsula el campo `yearsOfExperience` haciéndolo privado (anteponiendo `#`) usando getter y setter para manipularlo. `Cirujano`, haciendo uso del polimorfismo, sobreescribe el método `getPatientsAttended()` para que trabaje con un arreglo de cirugías en lugar de consultas.
+
 ## Changelog
 |Fecha      |Cambios introducidos                       |
 |-----------|-------------------------------------------|
@@ -153,5 +164,6 @@ Las estructuras de datos fueron implementadas en el archivo `structures.js`. Est
 |2024-11-11 | Entrega ejercicio práctico Nº 3           |
 |2024-12-07 | Entrega taller 2 del módulo 3             |
 |2024-12-14 | Entrega Laboratorio Virtual 1 Módulo 3    |
+|2024-12-18 | Entrega Laboratorio Virtual 2 Módulo 3    |
   
 © 2024 Hospital San Itario. Todos los derechos reservados
