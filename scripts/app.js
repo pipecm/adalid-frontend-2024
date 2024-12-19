@@ -1,6 +1,8 @@
-import { hospitalServices, hospitalDoctors, appointments, contactRequests } from './data.js';
+import { hospitalServices, hospitalDoctors, appointments, contactRequests, hospitalPatients, hospitalDoctorsAsJson, surgeries } from './data.js';
 import { NAME_REGEX, EMAIL_REGEX, PHONE_REGEX } from './constants.js'
 import { Stack, Queue } from './structures.js'
+import { calculateAverageWaitingTime, calculateTotalHours, getTotalCost, processAsyncData, applyDiscounts } from './functions.js'
+import { Doctor, Cirujano } from './entities.js'
 
 const htmlName = location.href.split("/").pop();
 
@@ -89,7 +91,7 @@ const getServiceItem = (serviceItem) => {
     return service;
 };
 
-if (htmlName == 'index.html') {
+if (htmlName == 'index.html' || !htmlName) {
     let servicesList = document.getElementById('services-grid');
 
     hospitalServices
@@ -282,3 +284,81 @@ console.log(contactQueue.getFirstItem());
 
 /* Cola luego de atender consultar proximo requerimiento */
 console.log(`Cola de solicitudes actual: ${contactQueue.data.map(request => request.id)}`);
+
+/* Módulo 3 - Laboratorio Virtual Nº 2 */
+
+/* Uso de función con currying para calcular costos totales de paciente Juanito + composición de funciones */
+let patients = Array.from(new Set(appointments.map(appt => appt.patient)));
+let doctorRates = new Map(hospitalDoctors.map(doc => [doc.id, doc.rate.cost]));
+let costPerPatient = patients.map(patient => {
+    let cost = getTotalCost(doctorRates)(appointments.filter(appt => appt.patient == patient));
+    return { patient: patient, totalCost: cost };
+});
+console.log(`Costos por paciente`);
+console.log(costPerPatient);
+
+/* Uso de función para calcular espera promedio */
+let avgWaitingTime = calculateAverageWaitingTime(appointments);
+console.log(`Tiempo promedio de espera: ${avgWaitingTime} minutos`);
+
+/* Uso de función recursiva para calcular horas totales */
+let totalHoursPerDr = hospitalDoctors.map(doc => {
+    let totalHours = calculateTotalHours(appointments.filter(appt => appt.doctorId === doc.id))
+    return { doctor: doc.name, totalHours: totalHours };
+});
+
+console.log(`Horas totales por doctor`);
+console.log(totalHoursPerDr);
+
+
+/* Implementa un listener para capturar el envío del formulario 
+y muestra un mensaje de confirmación. */
+let contactForm = document.getElementById("contact_form");
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let contactRequest = {
+        id: contactRequests.length + 1,
+        name: document.getElementById("form_name").value,
+        email: document.getElementById("form_email").value,
+        subject: document.getElementById("form_subject").value,
+        message: document.getElementById("form_message").value
+    };
+    console.log(contactRequest);
+    alert(`Estimado ${contactRequest.name}, muchas gracias por contactarse con el hospital. Pronto le responderemos`);
+});
+
+/* Dispara un evento personalizado que simule la llegada de un nuevo paciente,
+mostrando una notificación en la página. */
+let randomPatient = hospitalPatients[Math.floor(Math.random() * hospitalPatients.length)];
+setTimeout(() => alert(`El paciente ${randomPatient.name} ha llegado a atenderse al hospital`), 10000);
+
+/* Implementa una función async/await para simular una llamada a una API REST que
+obtenga los datos de los doctores. Usa Promise para manejar los casos de éxito o
+fallo. */
+const getAsyncData = async (retrieveData) => {
+    let resultado;
+    try {
+        console.log("Iniciando proceso con async/await...");
+        resultado = await processAsyncData(retrieveData);
+    } catch (error) {
+        console.error(error);
+    }
+    console.log("Finalizando proceso con async/await...");
+    console.log(resultado);
+};
+
+getAsyncData(hospitalDoctorsAsJson);
+
+/* POO en JavaScript */
+/* Uso de clase Doctor */
+const drJohnson = new Doctor(hospitalDoctors[0].id, hospitalDoctors[0].name, hospitalDoctors[0].specialty, hospitalDoctors[0].yearsOfExperience);
+console.log(drJohnson.getDoctorInfo());
+console.log(`El doctor ${drJohnson.name} atendio a ${drJohnson.getPatientsAttended(appointments)} pacientes`);
+console.log(`El doctor ${drJohnson.name} tiene ${drJohnson.getYearsOfExperience()} años de experiencia`);
+drJohnson.setYearsOfExperience(11);
+console.log(`Ahora el doctor ${drJohnson.name} tiene ${drJohnson.getYearsOfExperience()} años de experiencia`);
+
+/* Uso de clase Cirujano */
+const surgeonHardy = new Cirujano(5, "Jeff Hardy", 4);
+console.log(surgeonHardy.getDoctorInfo());
+console.log(`El cirujano ${surgeonHardy.name} realizó ${surgeonHardy.getPatientsAttended(surgeries)} cirugías`);

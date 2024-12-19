@@ -35,11 +35,16 @@ export const hospitalServices = [
 
 export const hospitalDoctors = [
     {
+        id: 1,
         name: "Jack Johnson",
         imageSource: "images/medico_01.jpg",
         specialty: "Medicina General",
         experience: "Vasta experiencia como médico general, más de 10 años trabajando para nuestro hospital",
         yearsOfExperience: 10,
+        rate: {
+            cost: 25000,
+            currency: "CLP"
+        },
         availability: {
             monday: true,
             tuesday: true,
@@ -55,11 +60,16 @@ export const hospitalDoctors = [
         }
     },
     {
+        id: 2,
         name: "Kenny Bell",
         imageSource: "images/medico_02.jpg",
         specialty: "Oftalmología",
         experience: "Experto en el tratamiento de miopía y astigmatismo",
         yearsOfExperience: 4,
+        rate: {
+            cost: 30000,
+            currency: "CLP"
+        },
         availability: {
             monday: false,
             tuesday: false,
@@ -75,11 +85,16 @@ export const hospitalDoctors = [
         }
     },
     {
+        id: 3,
         name: "Elsa Karina",
         imageSource: "images/medico_03.jpg",
         specialty: "Traumatología",
         experience: "Especialista en el tratamiento de lesiones musculares",
         yearsOfExperience: 5,
+        rate: {
+            cost: 15000,
+            currency: "CLP"
+        },
         availability: {
             monday: true,
             tuesday: true,
@@ -95,11 +110,16 @@ export const hospitalDoctors = [
         }
     },
     {
+        id: 4,
         name: "Paz Guerra",
         imageSource: "images/medico_04.webp",
         specialty: "Cardiología",
         experience: "Experimentada en el tratamiento de afecciones al corazón",
         yearsOfExperience: 8,
+        rate: {
+            cost: 25000,
+            currency: "CLP"
+        },
         availability: {
             monday: true,
             tuesday: true,
@@ -121,24 +141,66 @@ export const appointments = [
     {
         id: 1,
         date: "2025-01-04",
-        time: "10:00:00",
+        startingTime: "10:00:00",
+        apptHours: 1,
+        waitingTimeInMinutes: 20,
         patient: "Juanito",
-        doctor: "Jack Johnson"
+        doctorId: 1
     },
     {
         id: 2,
         date: "2025-01-03",
-        time: "12:00:00",
+        startingTime: "12:00:00",
+        apptHours: 1,
+        waitingTimeInMinutes: 25,
         patient: "Pedrito",
-        doctor: "Paz Guerra"
+        doctorId: 4
     },
     {
         id: 3,
         date: "2025-01-03",
-        time: "15:00:00",
+        startingTime: "15:00:00",
+        apptHours: 2,
+        waitingTimeInMinutes: 15,
         patient: "Gabriela",
-        doctor: "Kenny Bell"
-    }
+        doctorId: 2
+    },
+    {
+        id: 4,
+        date: "2025-01-05",
+        startingTime: "10:00:00",
+        apptHours: 1,
+        waitingTimeInMinutes: 15,
+        patient: "Juanito",
+        doctorId: 1
+    },
+    {
+        id: 5,
+        date: "2025-01-06",
+        startingTime: "10:00:00",
+        apptHours: 1,
+        waitingTimeInMinutes: 10,
+        patient: "Juanito",
+        doctorId: 1
+    },
+    {
+        id: 6,
+        date: "2025-01-07",
+        startingTime: "10:00:00",
+        apptHours: 1,
+        waitingTimeInMinutes: 15,
+        patient: "Juanito",
+        doctorId: 1
+    },
+    {
+        id: 7,
+        date: "2025-01-08",
+        startingTime: "15:00:00",
+        apptHours: 2,
+        waitingTimeInMinutes: 15,
+        patient: "Gabriela",
+        doctorId: 2
+    },
 ];
 
 /* Datos de solicitudes de contacto */
@@ -165,3 +227,51 @@ export const contactRequests = [
         message: "Buenos días, les escribe Fabian, TENS con 1 año de experiencia, y tengo interes en trabajar en el hospital. Cordialmente, Fabian"
     }
 ];
+
+/* Pacientes */
+export const hospitalPatients = [
+    {
+        id: 1,
+        name: "Carlos"
+    },
+    {
+        id: 2,
+        name: "Fabian"
+    },
+    {
+        id: 3,
+        name: "Laura"
+    },
+    {
+        id: 4,
+        name: "Claudia"
+    }
+];
+
+/* Datos de cirugías */
+export const surgeries = [
+    {
+        id: 1,
+        surgeonId: 5,
+        type: "Cirugia bariatrica"
+    },
+    {
+        id: 2,
+        surgeonId: 6,
+        type: "Cirugia ocular lasik"
+    },
+    {
+        id: 3,
+        surgeonId: 5,
+        type: "Cirugia bariatrica"
+    },
+    {
+        id: 4,
+        surgeonId: 7,
+        type: "Cirugia al torax"
+    }
+];
+
+export const hospitalDoctorsAsJson = () => {
+    return JSON.stringify(hospitalDoctors);
+};
